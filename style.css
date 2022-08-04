@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+html{
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+.responsive{
+    padding: 20px 20px;
+    width: 3%;
+    height: auto;
+    float: left;  
+}
+
+#main{
+    width: 100%;
+    height: 120vh;
+    background-image: url(/assets/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+}
+
+#main::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(6, 67, 96);
+    background-image: radial-gradient(circle, rgb(6, 67, 96) 70% , black );
+    opacity: .5;
+    z-index: -1; 
+}
+
+.mainContainer{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#main .mainContainer h1{
+    font-size: 35px;
+    letter-spacing: .1rem;
+    line-height: 45px;
+    font-weight: 500;
+}
+
+#main .mainContainer p{
+    font-size: 20px;
+    letter-spacing: .1rem;
+    line-height: 30px;
+    margin-top: 15px;
+    font-weight: 80;
+}
+
+#main .btn{
+    display: inline-block;
+    padding: 5px 15px;
+    color: white;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 4px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 25px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+    cursor: pointer;
+}
+
+#main .btn:hover{
+    color: rgb(6, 67, 96);
+    background-color: white;
+}
+
+
+#alt .alert{
+    background: rgb(216, 219, 219);
+    padding: 20px 20px;
+    max-width: 1600px;
+    position: relative;
+    align-items: center;
+    z-index: 1;
+    color: black;
+    display: flex;
+    justify-content: center;
+    line-height: 23px;
+    
+}
+
+#alt .alert .term{
+    color: blue;
+}
+
+#alt .alert .btnAlert{
+    display: inline-block;
+    padding: 5px 5px;
+    color: white;
+    background-color: blue;
+    border: 3px solid blue;
+    border-radius: 3px;
+    font-size: 15px;
+    letter-spacing: .1rem;
+    margin-left: 40px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+    cursor: pointer;
+
+}
+
+.slider{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.slider.close{
+    top: 100%;
+    height: 0;
+}
+
+/* End Main Section */
+
+
+/* Services Section */
+
+#services {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 100px 0;
+    background-color: #cccccc;
+}
+
+#services .title{
+    font-size: 2rem;
+    font-weight: 300;
+    color: grey;
+    margin-bottom: 10px;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+#services .servicesTop p{
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: .05rem;
+    line-height: 25px;
+    text-align: center;
+    padding: 0 30% 0 30%;
+    margin-bottom: 30px;
+    color: grey;
+}
+
+#services .servicesBot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#services .servicesItem{
+    flex-basis: 26%;
+    border: 1px solid grey;
+    margin-top: 15px;
+    margin-left: 15px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    align-items: center;
+
+}
+
+#services .servicesItem h2{
+    text-align: left;
+}
+
+#services .servicesItem p{
+    text-align: left;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    font-size: 12px;
+    margin-left: 20px;
+    letter-spacing: .05rem;
+    line-height: 17px;
+    color: grey;
+}
+
+#services .titleItem{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: grey;
+}
+
+#services .imageItem{
+    fill: grey;
+    color: grey;
+    width: 35px;
+}
+
+/* End Services Section */
+
+
+/* Footer Section */
+
+#footer{
+    text-align: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 40px 0;
+    background-color: #010525;
+}
+
+#footer .copyright h4{
+    font-size: 15px;
+    letter-spacing: .05rem;
+    color: white;
+
+}
+/* End Footer Section */
+
+
+
+/* Newspanel Section */
+.newsContainer{
+    align-items: left;
+    display: flex;
+    width: 620px;
+    background-color: rgb(57, 147, 249);
+    color: white;
+    padding: 15px 25px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    opacity: 95%;
+    transform: translateY(300px);
+    transition: 2s all ease;
+}
+
+.newsContainer.active {
+    transform: translateY(0);
+}
+
+.newsLetter{
+    position: relative;
+    padding: 15px 25px;
+    
+}
+
+.newsEmail{
+    justify-content: space-between;
+    display: flex;
+}
+
+.newsContainer h2{
+    letter-spacing: .1rem;
+    margin-bottom: 10px;
+}
+
+.newsContainer p{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+.newsEmail .inputEmail{
+    width: 80%;
+    padding-top: 10px;
+    background-color: white;
+}
+
+.newsEmail .buttonEmail{
+    background-color: orange;
+    color: white;
+    padding: 10px;
+    border: none;
+    letter-spacing: 2px;
+}
+
+.newsContainer-close{
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    cursor: pointer;
+}
+/* End Newspanel Section */
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .newsContainer{
+        width: 100vw;
+    }
+
+    #services .servicesTop h1{
+        font-size: 25px;
+        font-weight: 300;
+    }
+
+    #services .servicesTop p{
+        padding: 0 7% 0 7%;
+    }
+
+    #services .servicesBot{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    #services .servicesItem{
+        flex-basis: 80%;
+        border: 1px solid grey;
+        margin-top: 20px;
+        margin-left: 2px;
+        padding-bottom: 0px;
+        padding-top: 20px;
+        align-items: center;
+    }
+
+    .newsContainer{
+        align-items: left;
+        display: flex;
+        width: 420px;
+        background-color: rgb(57, 147, 249);
+        color: white;
+        padding: 0 10px 0 10px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        opacity: 95%;
+        transform: translateY(300px);
+        transition: 2s all ease;
+    }
+
+    .newsLetter{
+        position: relative;
+        padding: 10px 10px;
+        
+    }
+
+    .newsContainer h2{
+        letter-spacing: .1rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 70%;
+    }
+    
+    .newsContainer p{
+        font-size: 16px;
+        margin-bottom: 10px;
+        width: 70%;
+    }
+
+    
+    .newsEmail .inputEmail{
+        width: 70%;
+        padding-top: 10px;
+        background-color: white;
+    }
+
+    .newsEmail .buttonEmail{
+        background-color: orange;
+        color: white;
+        margin-top: 10px;
+        border: none;
+        letter-spacing: 2px;
+        width: 71%;
+        position: relative;
+    }
+
+    .newsEmail{
+        position: relative;
+        width: 100%;
+        display: block;
+        
+    }
+
+    .newsContainer-close{
+        position: absolute;
+        right: 15px;
+        top: 12px;
+        cursor: pointer;
+        width: 28%;
+    }
+
+    .msg{
+        font-size: small;
+        width: 100%;
+        position: relative;
+    }
+
+    .responsive{
+        width: 10%;
+    }
+
+}
